@@ -1,0 +1,98 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+			"^T-(.*)": "@/components/$1/$1.vue"
+		}
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "订单页面",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#535353",
+		"selectedColor": "#0bb584",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/resource/images/tab_index.png",
+				"selectedIconPath": "static/resource/images/tab_index_seled.png"
+			},
+			{
+				"pagePath": "pages/order/order",
+				"text": "订单",
+				"iconPath": "static/resource/images/tab_pub.png",
+				"selectedIconPath": "static/resource/images/tab_pub_seled.png"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "个人中心",
+				"iconPath": "static/resource/images/tab_user.png",
+				"selectedIconPath": "static/resource/images/tab_user_seled.png"
+			}
+		]
+	},
+	"subPackages": [
+		{
+			"root": "subPages",
+			"pages": [
+				{
+					"path": "search/search",
+					"style": {
+						"navigationBarTitleText": "搜索"
+					}
+				},
+				{
+					"path": "hospital/hospital",
+					"style": {
+						"navigationBarTitleText": "问诊咨询",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "service/service"
+				},
+				{
+					"path": "clients/clients",
+					"style": {
+						"navigationBarTitleText": "clients"
+					}
+				},
+				{
+					"path": "orderDetail/orderDetail",
+					"style": {
+						"navigationBarTitleText": "订单详情"
+					}
+				}
+			]
+		}
+	]
+}
